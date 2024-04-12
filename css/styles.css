@@ -20,7 +20,7 @@ body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #222;
 }
 
@@ -85,12 +85,53 @@ select:-webkit-autofill:focus {
   flex-grow: 1;
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
+.wall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://muralsyourway.vtexassets.com/arquivos/ids/238330-825-auto?width=825&height=auto&aspect=true");
+  background-size: cover;
 }
+
+.rom {
+  display: flex;
+  border: 20px ridge rgb(165, 91, 42);
+  box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.6);
+  background-image: url("https://media.designcafe.com/wp-content/uploads/2022/07/29185240/industrial-rustic-living-room-in-earthy-tones.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.tabaqa {
+  width: 200px;
+  height: 400px;
+  border: 20px ridge rgb(165, 91, 42);
+  background-color: rgb(0, 0, 0, 0.6);
+  transition: transform 0.5s ease;
+}
+
+.tabaqa-left {
+  transform-origin: left center;
+}
+
+.tabaqa-right {
+  transform-origin: right center;
+}
+
+.rom:hover .tabaqa-left {
+  transform: perspective(2000px) rotateY(-125deg);
+}
+
+.rom:hover .tabaqa-right {
+  transform: perspective(2000px) rotateY(125deg);
+}
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {}
